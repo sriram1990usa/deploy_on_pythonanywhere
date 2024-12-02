@@ -1,0 +1,58 @@
+<pre> 
+mkdir geeks
+cd geeks
+virtualenv venv 
+cd venv/scripts 
+activate 
+(venv) cd ../.. 
+()geeks> pip install django 
+()geeks> django-admin startproject deploy_on_pythonanywhere 
+
+geeks> 
+deploy_on_pythonanywhere 
+venv 
+
+geeks>deploy_on_pythonanywhere> 
+deploy_on_pythonanywhere (proj)
+manage.py
+
+()geeks/deploy_on_pythonanywhere> django-admin startapp app 
+deploy_on_pythonanywhere> 
+app 
+deploy_on_pythonanywhere (proj)
+
+()geeks/deploy_on_anywhere> python manage.py runserver 
+
+app runs in localhost:8000 
+===============================================
+open new cmd terminal 
+
+()geeks/deploy_on_pythonanywhere> 
+app 
+db.sqlite3 
+deploy_on_pythonanywhere (proj)
+manage.py 
+
+()geeks/deploy_on_pythonanywhere> git init 
+()geeks/deploy_on_pythonanywhere> git commit -m "first commit"
+
+open a new repo in github to show as
+https://github.com/sriram1990usa/deploy_on_pythonanywhere 
+
+keep private
+
+()geeks/deploy_on_pythonanywhere> git branch -M main 
+complete authentication 
+
+in case of error: you may want to integrate remote changes  eg git pull ... bef pushing again 
+
+()geeks/deploy_on_pythonanywhere> git pull --rebase origin main 
+()geeks/deploy_on_pythonanywhere> git push origin main 
+
+files successfully uploaded to github repo from vs code 
+
+
+
+
+
+</pre>
