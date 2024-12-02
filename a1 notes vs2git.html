@@ -1,4 +1,6 @@
 <pre> 
+CREATE PROJECT AND APP IN VSCODE 
+
 mkdir geeks
 cd geeks
 virtualenv venv 
@@ -24,7 +26,9 @@ deploy_on_pythonanywhere (proj)
 ()geeks/deploy_on_anywhere> python manage.py runserver 
 
 app runs in localhost:8000 
-===============================================
+===========================================================
+UPLOAD PROJECT IN VS CODE TO GITHUB REPO 
+
 open new cmd terminal 
 
 ()geeks/deploy_on_pythonanywhere> 
@@ -49,7 +53,78 @@ in case of error: you may want to integrate remote changes  eg git pull ... bef 
 ()geeks/deploy_on_pythonanywhere> git pull --rebase origin main 
 ()geeks/deploy_on_pythonanywhere> git push origin main 
 
-files successfully uploaded to github repo from vs code 
+files successfully uploaded to github repo from vs code
+
+()geeks/deploy_on_pythonanywhere> git add . 
+()geeks/deploy_on_pythonanywhere> git commit -m "added requirements.txt"
+()geeks/deploy_on_pythonanywhere> git push 
+in case of error: the current branch main has no upstream branch. 
+To push current branch and set the remove as upstream, use >
+()geeks/deploy_on_pythonanywhere> git push --set-upstream origin main 
+
+==========================================
+HOST IN PYTHONANYWHERE WEBSITE 
+
+signin pythonanywhere website 
+consoles 
+bash 
+example> git clone https://github.com/Prakhar-Mangal/deploy_on_pythonanywhere.git
+
+git clone https://github.com/sriram1990usa/deploy_on_pythonanywhere.git
+
+enter username and pwd when asked 
+in case of error: support for pwd authentication removed in aug 13,2021> 
+
+Goto settings of Github account
+Find and Select Developer Settings
+https://github.com/settings/tokens/
+Find and Select Personal access tokens
+Generate a new token
+Fill in any note and select the access scopes
+once done click on generate token
+
+()geeks/deploy_on_pythonanywhere> pip install -r requirements.txt 
+()geeks/deploy_on_pythonanywhere> git add . 
+()geeks/deploy_on_pythonanywhere> git commit -m "addred requirements.txt installed" 
+()geeks/deploy_on_pythonanywhere> git push 
+
+in pythonanywhere site console 
+ls 
+README.txt  app  deploy_on_pythonanywhere  proj  urls.py  views.py 
+pwd 
+/home/sriramusa     /// store for future use 
+
+we set up our project successfully. 
+Now click on Web 
+select Add a new web app  // only on upgrade 
+
+check under web and files 
+see deploy_on_pythonanywhere (proj) and app files are correctly loaded 
+check settings.py for proj, app details 
+delete old unrequired files 
+check wsgi files for abv proj name 
+check source code file name 
+Source code:
+/home/sriramusa/deploy_on_pythonanywhere
+
+Go to directory
+Working directory:
+/home/sriramusa/
+
+Go to directory
+WSGI configuration file:/var/www/sriramusa_pythonanywhere_com_wsgi.py
+Python version:
+3.10
+
+if you make changes in files or add files in vscode 
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+()geeks/deploy_on_pythonanywhere> git add . 
+()geeks/deploy_on_pythonanywhere> git commit -m "added/changed xxxxxxxxxxx" 
+()geeks/deploy_on_pythonanywhere> git push 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
 
 
 
